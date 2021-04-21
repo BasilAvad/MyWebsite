@@ -1,0 +1,19 @@
+﻿@using MyWebsite.Models.Sınıflar
+@model List<RecentProject>
+@foreach (var x in Model)
+{
+
+
+<div class="right">
+        <div class="bot-left">
+            <img src="@x.RecentProjectsImage"style="width:350px;height:170px" alt="" />
+        </div>
+        <div class="left-text">
+
+            <h4>@x.Baslik</h4>
+            <span class="doller">@x.Tarih.ToString("dd.MM.yyyy")</span>
+            <p>@x.Aciklama.Substring(0,60)</p>
+            <p><a href="/RecentProject/BlogDetay/@x.Id"><span class="read">Read More >></span></a></p>
+        </div>
+    </div>
+}

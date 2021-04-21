@@ -1,0 +1,67 @@
+﻿@model MyWebsite.Models.Sınıflar.RecentProject
+
+@{
+    ViewBag.Title = "BlogGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Projects Update Page</h2>
+<br />
+@using (Html.BeginForm("BlogGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control",@readonly= "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Baslik)
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.RecentProjectsImage)
+    @Html.TextBoxFor(x => x.RecentProjectsImage, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama,15,1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.RecentProjectsImage2)
+    @Html.TextBoxFor(x => x.RecentProjectsImage2, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.Aciklama2)
+    @Html.TextAreaFor(x => x.Aciklama2,15,1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.RecentProjectsImage3)
+    @Html.TextBoxFor(x => x.RecentProjectsImage3, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.Aciklama3)
+    @Html.TextAreaFor(x => x.Aciklama3,15,1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.RecentProjectsImage4)
+    @Html.TextBoxFor(x => x.RecentProjectsImage4, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.Aciklama4)
+    @Html.TextAreaFor(x => x.Aciklama4,15,1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.RecentProjectsImage5)
+    @Html.TextBoxFor(x => x.RecentProjectsImage5, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama5)
+    @Html.TextAreaFor(x => x.Aciklama5,15,1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Kaynaklar)
+    @Html.TextAreaFor(x => x.Kaynaklar,5,1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Kaynaklar2)
+    @Html.TextAreaFor(x => x.Kaynaklar2,5,1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Kaynaklar3)
+    @Html.TextAreaFor(x => x.Kaynaklar3,5,1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Update Project</button>
+}
+

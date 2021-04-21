@@ -1,0 +1,35 @@
+﻿@using MyWebsite.Models.Sınıflar
+@model List<Yorumlar>
+@{
+    ViewBag.Title = "YorumlarListesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Comments List</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>USER NEAME</th>
+        <th>MAİL</th>
+        <th>COMMENT</th>
+        <th>BLOGID</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+        <th>DETAILS</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.KullaniciAdi</td>
+            <td><a href="mailto:basilavad9@gmail.com">@x.Mail</a></td>
+            <td>@x.Yorum</td>
+            <td>@x.Blog.Baslik</td>
+            <td><a href="/Admin/YorumSil/@x.Id" class="btn btn-danger">Delet</a></td>
+            <td><a href="/Admin/YorumGetir/@x.Id" class="btn btn-warning">Update </a></td>
+            <td><a href="/RecentProject/BlogDetay/@x.Id" class="btn btn-warning">Details </a></td>
+            
+        </tr>
+    }
+</table>

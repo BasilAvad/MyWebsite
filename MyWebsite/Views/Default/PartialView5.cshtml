@@ -1,0 +1,19 @@
+﻿@using MyWebsite.Models.Sınıflar
+@model List<Book>
+<div class="box1-left">
+    @foreach (var x in Model)
+    {
+
+
+        <div class="bot-img">
+            <img src="@x.BookImage" style="width:145px;height:125px;" alt="" />
+        </div>
+        <div class="bot-desc1" style="font-size:17px;color:#000000">
+            <h7>@x.Baslik</h7>
+
+        </div>
+       
+        <p9 style="font-size:14px;margin-bottom:20px" ><a href="@x.Aciklama" target="_blank">@x.Aciklama.Substring(0,25)</a></p9>
+        <div class="clear"></div>
+    }
+</div>

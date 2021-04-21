@@ -1,0 +1,183 @@
+﻿@using MyWebsite.Models.Sınıflar
+@model List<RecentProject>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+<body>
+
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:50px;margin-bottom:25px;margin-top:4px;">For Mechatronics Engineers</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web1/images/electrical-circuit.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p><a href="https://app.theconstructsim.com/en/course/python-3-for-robotics_38_0/#/Courses" target="_blank">Projects to do </a></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web1/images/books (1).png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p><a href="https://www.pinterest.com/pin/223631937727665309/" target="_blank">Books to read </a> </p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web1/images/presentation.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p><a href="https://www.coursera.org/" target="_blank">Things to learn </a></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web1/images/hobbies-icon-6.jpg" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p><a href="https://content.techgig.com/top-5-hobbies-that-involve-programming-or-scripting/articleshow/76354159.cms" target="_blank">Hobbies</a></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:670px;height:443px">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+
+
+                                    <li><img src="@x.RecentProjectsImage" style="width:700px;height:430px;" alt=""></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Welcome to my website!</h3>
+                    <h6 style="margin-left:10px">This project 10/10/2020 has been completed by me using ASP.NET MVC Framework. Everything useful for Mechatronics students will be shared here.  </h6>
+                    <h6 style="margin-left:10px">
+                        MVC is an architectural pattern that separates applications into
+                        three components: the model, the view, and the controller. ASP.NET MVC provides this functionality to the ASP.NET framework
+                        as an alternative to the WebForms pattern. You’ll love working with this highly-testable and lightweight framework!
+                    </h6>
+                    <h5 style="margin-left:10px"><a href="https://en.wikipedia.org/wiki/ASP.NET_MVC" target="_blank">Click Here To Learn Mor About ASP.NET MVC Framework</a></h5>
+                    <h5 style="margin-left:10px"><a href="https://goalkicker.com/CSharpBook/" target="_blank">Click Here To Download The C# Notes For Professionals And More Books</a></h5>
+
+                </div>
+                @Html.Action("PartialView1", "Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("PartialView3", "Default")
+                        @Html.Action("PartialView4", "Default")
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- toggle switch for light and dark theme -->
+    <!-- //toggle switch for light and dark theme -->
+    </div>
+    </nav>
+    <!--//nav-->
+    </header>
+    <!-- //header -->
+    <!-- contact-form 2 -->
+    <!-- /contact-form-2 -->
+    <!-- footer -->
+    <div class="footer-content py-lg-5 py-4 text-center">
+        <div class="container">
+
+            
+
+        </div>
+    </div>
+    <footer class="w3l-footer-16">
+
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+        </button>
+
+        <!-- move top -->
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!-- //move top -->
+    </footer>
+    <!-- //footer -->
+    <!-- Template JavaScript -->
+   
+</body>
+</html>
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Design Blog a Blog Category Bootstrap Responsive Website Template | Contact : W3layouts</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/web3/assets/css/style-starter.css">
+</head>
+
+<body>
+
+   
+
+</body>
+
+</html>

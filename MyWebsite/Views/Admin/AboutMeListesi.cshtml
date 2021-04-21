@@ -1,0 +1,32 @@
+﻿@using MyWebsite.Models.Sınıflar
+@model List<AboutMe>
+
+@{
+    ViewBag.Title = "AboutMeListesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>About Us</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>FOTO URL</th>
+        <th>EXPLANATİON</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+        <th>DETAILS</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.FotoUrl</td>
+            <td>@x.Aciklama</td>
+            <td><a href="/Admin/AboutMeSil/@x.Id" class="btn btn-danger">Delet</a></td>
+            <td><a href="/Admin/AboutMeGetir/@x.Id" class="btn btn-warning">Update </a></td>
+            <td><a href="/About/Index/@x.Id" class="btn btn-default">Details</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniAbout/" class="btn btn-primary">Update İnformation</a>

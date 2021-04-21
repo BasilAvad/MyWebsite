@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<title>BasilAvad</title>
+<link rel="shortcut icon" type="image/x-icon" href="~/android.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
+        <h3 class="w3-bar-item">Menu</h3>
+        <a href="/Admin/Index/" class="w3-bar-item w3-button btn btn-success" style="margin-bottom:10px">Recent Projects</a>
+        <a href="/Admin/YorumlarListesi/" class="w3-bar-item w3-button btn btn-success" style="margin-bottom:10px">Comments</a>
+        <a href="/Admin/Contact/" class="w3-bar-item w3-button btn btn-success"style="margin-bottom:10px">Contact</a>
+        <a href="/Admin/AboutMeListesi/" class="w3-bar-item w3-button btn btn-success"style="margin-bottom:10px">About Us</a>
+        <a href="/Admin/BookListesi/" class="w3-bar-item w3-button btn btn-success"style="margin-bottom:10px">Books</a>
+        <a href="/Default/Index/" class="w3-bar-item w3-button btn btn-info"style="margin-bottom:10px"target="_blank" >Go to web page</a>
+        <a href="/Logİn/LogOut/" class="w3-bar-item w3-button btn btn-danger">Log Out</a>
+
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:15%">
+
+        <div class="w3-container w3-teal">
+            <h4>Admin control panel</h4>
+        </div>
+
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+
+    </div>
+
+</body>
+</html>

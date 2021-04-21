@@ -1,0 +1,23 @@
+﻿@model MyWebsite.Models.Sınıflar.AboutMe
+@{
+    ViewBag.Title = "AboutMeGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>About Me Update Page</h2>
+
+<br />
+@using (Html.BeginForm("AboutMeGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.FotoUrl)
+    @Html.TextBoxFor(x => x.FotoUrl, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama,15,1, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-success">Update Book</button>
+}

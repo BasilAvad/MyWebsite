@@ -1,0 +1,34 @@
+﻿@using MyWebsite.Models.Sınıflar
+@model List<RecentProject>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Recent Projects List</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>TİTLE</th>
+        <th>DATETİME</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+        <th>DETAILS</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+
+            <td>@x.Id</td>
+            <td>@x.Baslik</td>
+            <td>@x.Tarih</td>
+            <td><a href="/Admin/BlogSil/@x.Id" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Admin/BlogGetir/@x.Id"class="btn btn-warning">Update</a></td>
+            <td><a href="/RecentProject/BlogDetay/@x.Id"class="btn btn-default">Details</a></td>
+
+        </tr>
+    }
+</table>
+<a href="/Admin/Yeniblog/" class="btn btn-primary">New Project</a>
+

@@ -1,0 +1,26 @@
+﻿@model MyWebsite.Models.Sınıflar.Book
+@{
+    ViewBag.Title = "BookGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Projects Update Page</h2>
+<br />
+@using (Html.BeginForm("BookgGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Baslik)
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BookImage)
+    @Html.TextBoxFor(x => x.BookImage, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama, 15, 1, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-success">Update Book</button>
+}

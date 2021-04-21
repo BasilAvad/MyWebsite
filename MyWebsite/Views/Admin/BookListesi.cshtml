@@ -1,0 +1,33 @@
+﻿@using MyWebsite.Models.Sınıflar
+@model List<Book>
+@{
+    ViewBag.Title = "BookListesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Books List</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>TİTLE</th>
+        <th>EXPLANATİON</th>
+        <th>BOOK IMAGE</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+        <th>DETAILS</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Baslik</td>
+            <td>@x.Aciklama</td>
+            <td>@x.BookImage</td>
+            <td><a href="/Admin/BookSil/@x.Id" class="btn btn-danger">Delet</a></td>
+            <td><a href="/Admin/BookGetir/@x.Id" class="btn btn-warning">Update </a></td>
+            <td><a href="/Default/Index/@x.Id" class="btn btn-default">Details</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniBook/" class="btn btn-primary">New Book Add</a>

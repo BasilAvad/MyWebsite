@@ -1,0 +1,187 @@
+﻿@model MyWebsite.Models.Sınıflar.RecentProjectYorum
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+    <!----//webfonts---->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Design Blog a Blog Category Bootstrap Responsive Website Template | Contact : W3layouts</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/web3/assets/css/style-starter.css">
+
+
+</head>
+<body>
+    
+    <!---header---->
+    <div class="header">
+        <div class="container">
+
+            <!---start-top-nav---->
+
+            <div class="clearfix"></div>
+
+            <!---//End-top-nav---->
+        </div>
+    </div>
+    <!--/header-->
+    <div class="single">
+        <div class="container">
+            <div class="col-md-8 single-main">
+                @foreach (var x in Model.Deger1)
+                {
+                    <div class="single-grid">
+
+
+                        <img src="@x.RecentProjectsImage" alt="" style="margin-bottom:20px;width: 510px;height:360px; border-radius: 9px;" />
+                        <a href="/RecentProject/BlogDetay/@x.Id" style="margin-left:25px">@x.Baslik</a>
+                        <p>
+                            @x.Aciklama.Substring(0, 63)
+                        </p>
+
+                    </div>
+                    <br /><br />
+                }
+
+            </div>
+
+            <div class="col-md-4 side-content">
+                <div class="recent">
+                    <h3>RECENT PROJECTS</h3>
+                    @foreach (var t in Model.Deger3)
+                    {
+
+
+                        <ul>
+                            <li><a href="/RecentProject/BlogDetay/@t.Id">@t.Baslik</a></li>
+
+                        </ul>
+                    }
+                </div>
+                @*<div class="comments">
+                        <h3>RECENT COMMENTS</h3>
+                        @foreach (var t in Model.Deger3)
+                        {
+                            <ul>
+                                <li><a href="/BlogDetay/YorumYap/@t.Id">Amada Doe </a> on <a href="/BlogDetay/YorumYap/">Hello World!</a></li>
+                                <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
+                                <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
+                            </ul>
+                        }
+                    </div>*@
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <!-- toggle switch for light and dark theme -->
+    <!-- //toggle switch for light and dark theme -->
+    <!-- //header -->
+    <!-- contact-form 2 -->
+    <!-- /contact-form-2 -->
+    <!-- footer -->
+
+    <footer class="w3l-footer-16">
+
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+        </button>
+
+        <!-- move top -->
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!-- //move top -->
+    </footer>
+    <!-- //footer -->
+    <!-- Template JavaScript -->
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/web3/assets/css/style-starter.css">
+    <!-- Template JavaScript -->
+    <script src="~/web3/assets/js/theme-change.js"></script>
+
+    <script src="~/web3/assets/js/jquery-3.3.1.min.js"></script>
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+
+    <script src="~/web3/assets/js/bootstrap.min.js"></script>
+    <body>
+
+</html>
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Design Blog a Blog Category Bootstrap Responsive Website Template | Contact : W3layouts</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/web3/assets/css/style-starter.css">
+</head>
+
+
+</html>

@@ -1,0 +1,112 @@
+﻿@model MyWebsite.Models.Sınıflar.RecentProjectYorum
+@{
+    ViewBag.Title = "BlogDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Personal Blog a Blogging Category Flat Bootstarp  Responsive Website Template | Single :: w3layouts</title>
+    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+    <!----//webfonts---->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--end slider -->
+
+
+</head>
+<body>
+    <!---header---->
+    <div class="header">
+    </div>
+    <!--/header-->
+    <div class="single">
+        <div class="container">
+            <div class="col-md-8 single-main">
+                <div class="single-grid">
+                    <h3>Project Details</h3>
+                    <br /> <br />
+                    @foreach (var x in Model.Deger1)
+                    {
+                        <img src="@x.RecentProjectsImage" alt="" />
+                        <h1 style="margin-top:10px"> @x.Baslik  </h1>
+                        <p style="white-space: pre-line">
+                            @x.Aciklama
+                        </p>
+                        <img src="@x.RecentProjectsImage2" alt="" />
+                        <p style="white-space: pre-line">
+                            @x.Aciklama2
+                        </p>
+                        <img src="@x.RecentProjectsImage3" alt="" />
+                        <p style="white-space: pre-line">
+                            @x.Aciklama3
+                        </p>
+                        <img src="@x.RecentProjectsImage4" alt="" />
+                        <p style="white-space: pre-line">
+                            @x.Aciklama4
+                        </p>
+                        <img src="@x.RecentProjectsImage5" alt="" />
+                        <p style="white-space: pre-line">
+                            @x.Aciklama5
+                        </p>
+                        <h4 style="margin-bottom:9px;">Resources</h4>
+                        <p9 class="btn btn-default" style="font-size:14px;margin-bottom:9px"><a href="@x.Kaynaklar" target="_blank">@x.Kaynaklar</a></p9>
+                        <p9 class="btn btn-default" style="font-size:14px;margin-bottom:9px"><a href="@x.Kaynaklar2" target="_blank">@x.Kaynaklar2</a></p9>
+                        <p9 class="btn btn-default" style="font-size:14px;margin-bottom:9px"><a href="@x.Kaynaklar3" target="_blank">@x.Kaynaklar3</a></p9>
+
+                    }
+                    <br /><br />
+
+                </div>
+                @foreach (var y in Model.Deger2)
+                {
+
+
+                    <ul class="comment-list">
+
+                        <li>
+                            <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
+                            <div class="desc">
+                                <p>@y.KullaniciAdi: @y.Yorum</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                    </ul>
+                }
+                @Html.Action("YorumYap", "RecentProject")
+
+            </div>
+            <div class="col-md-4 side-content">
+                <div class="recent">
+                    <h3>RECENT PROJECTS</h3>
+                    @foreach (var x in Model.Deger3)
+                    {
+
+
+                        <ul>
+                            <li><a href="/RecentProject/BlogDetay/@x.Id">@x.Baslik</a></li>
+
+                        </ul>
+                    }
+                </div>
+                
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,98 @@
+﻿@using MyWebsite.Models.Sınıflar
+@model List<AboutMe>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>About Us</h3>
+            @foreach (var x in Model)
+            {
+                <img src="@x.FotoUrl" alt="" style=" width: 510px;height:360px; border-radius: 9px;" />
+                <br /><br />
+
+                <h6 style="white-space: pre-line">@x.Aciklama</h6>
+                <br /><br />
+            }
+
+        </div>
+    </div>
+</div>
+
+<!-- toggle switch for light and dark theme -->
+<!-- //toggle switch for light and dark theme -->
+    </div>
+    </nav>
+<!--//nav-->
+    </header>
+<!-- //header -->
+<!-- contact-form 2 -->
+<!-- /contact-form-2 -->
+<!-- footer -->
+<div class="footer-content py-lg-5 py-4 text-center">
+    
+</div>
+<footer class="w3l-footer-16">
+
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-angle-up"></span>
+    </button>
+
+    <!-- move top -->
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+</footer>
+<!-- //footer -->
+<!-- Template JavaScript -->
+</body>
+</html>
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Design Blog a Blog Category Bootstrap Responsive Website Template | Contact : W3layouts</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/web3/assets/css/style-starter.css">
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>

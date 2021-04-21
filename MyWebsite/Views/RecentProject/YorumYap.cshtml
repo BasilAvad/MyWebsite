@@ -1,0 +1,11 @@
+﻿<div class="content-form">
+    <h3>Leave a comment</h3>
+  
+    <form method="post">
+        <input type="hidden" placeholder="ID" name="RecentProjectId" value="@ViewBag.deger" required readonly= "readonly" />
+        <input type="text" placeholder="Name" name="KullaniciAdi" required />
+        <input type="text" placeholder="Email"name="Mail" required />
+        <textarea placeholder="Message" name="Yorum"></textarea>
+        <input type="submit" value="SEND" />
+    </form>
+</div>

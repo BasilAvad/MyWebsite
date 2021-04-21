@@ -1,0 +1,96 @@
+﻿ 
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>BasilAvad</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/android.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/web1/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/web1/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/web1/js/jquery.min.js"></script>
+    <script src="~/web1/js/responsiveslides.min.js"></script>
+
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 1
+            $("#slider1").responsiveSlides({
+                auto: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="mobile-position">
+
+    </div>
+    <div class="header">
+        <div class="wrap">
+            <div class="logo" style="margin-right:40px"><a href="/Default/Index/"><img src="#" alt="" /></a></div>
+            <div class="con-right">
+                <div class="grid1-l-img">
+                    <img style="width:70px;height:55px" src="~/web1/images/zfoto.png" alt="">
+                </div>
+                <div class="grid1-l-desc">
+                    <p><h5 href="#">BASİL AVAD</h5></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="header-bottom">
+        <div class="wrap">
+            <ul id="nav">
+                <li><a href="/Default/Index/">Home</a></li>
+
+                <li><a class="hsubs" href="/About/Index/">About Us</a></li>
+                <li></li>
+                <li>
+                    <a class="hsubs" href="#">Categories</a>
+                    <ul class="subs">
+                        <li><a href="/RecentProject/Index/">AI</a></li>
+                        <li><a href="/RecentProject/Index/">ROS</a></li>
+                        <li><a href="/RecentProject/Index/">Machine Learning</a></li>
+                        <li><a href="/RecentProject/Index/">Projects & Articles</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Contact/Index/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class"content">
+        @RenderBody()
+    </div>
+    <div class="footer-bottom">
+        <div class="wrap">
+            <div class="copy">
+                <ul class="author-icons mt-4" style="margin-bottom:20px;">
+                    <li><a class="facebook" href="https://www.facebook.com/profile.php?id=100010650482331"><span class="fa fa-facebook" aria-hidden="true"></span></a> </li>
+                    <li><a class="twitter" href="https://twitter.com/AvadBasil"><span class="fa fa-twitter" aria-hidden="true"></span></a></li>
+                    <li><a class="google" href="https://myaccount.google.com/u/1/"><span class="fa fa-google-plus" aria-hidden="true"></span></a></li>
+                    <li><a class="linkedin" href="https://www.linkedin.com/in/basil-avad-6aa6691a9/"><span class="fa fa-linkedin" aria-hidden="true"></span></a></li>
+                    <li><a class="github" href="https://github.com/BasilAvad"><span class="fa fa-github" aria-hidden="true"></span></a></li>
+                    <li><a class="dribbble" href="mailto:basilavad9@gmail.com"><span class="fa fa-dribbble" aria-hidden="true"></span></a></li>
+                </ul>
+                <p>&copy; 2020 Basil Avad. All Rights Reserved  </p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
